@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+
+<body>
+<div>
+    <h2 >Spring Boot Crud System -Fakta Registation</h2>
+    <tr>
+        <div align = "left" >
+            <h3><a  th:href="@{'/new'}">Add new</a></h3>
+        </div>
+    </tr>
+    <tr>
+
+        <div class="col-sm-5" align = "center">
+            <div class="panel-body" align = "center" >
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Sk_employee</th>
+                        <th>Sk_product</th>
+                        <th>Sk_customer</th>
+                        <th>Sk_waktu</th>
+                        <th>Amount</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr  th:each="fakta : ${listfakta }">
+                        <td th:text="${fakta.id}">fakta ID</td>
+                        <td th:text="${fakta.Sk_employee}">Sk_employee</td>
+                        <td th:text="${fakta.Sk_product}">Sk_product</td>
+                        <td th:text="${fakta.Sk_customer}">Sk_customer</td>
+                        <td th:text="${fakta.Sk_waktu}">Sk_waktu</td>
+                        <td th:text="${fakta.Amount}">Amount</td>
+                        <td>
+                            <a th:href="@{'/edit/' + ${student.id}}">Edit</a>
+                        </td>
+                        <td>
+                            <a th:href="@{'/delete/' + ${student.id}}">Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </tr>
+
+    </tbody>
+    </table>
+    </div>
+</body>
+</html>

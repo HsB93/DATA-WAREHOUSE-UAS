@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Create New Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.minjs" ></script>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Fakta</h1>
+    <br />
+    <div class="col-sm-4">
+        <form action="#" th:action="@{/save}" th:object="${fakta}" method="post">
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >id</label>
+                    <td>
+                        <input type="hidden" th:field="*{id}" />
+                        <input type="text" th:field="*{id}" class="form-control" placeholder="id" />
+                        <div alight="left">
+                        </div>
+                <tr>
+                    <label class="form-label" >sk_employe</label>
+                    <td><input type="text" th:field="*{sk_employe}" class="form-control" placeholder="sk_employe" /></td>
+                </tr>
+            </div>
+            <div alight="left">
+            </div>
+                <tr>
+                    <label class="form-label" >sk_product</label>
+                    <td><input type="text" th:field="*{sk_product}" class="form-control" placeholder="sk_product" /></td>
+                </tr>
+                <div alight="left">
+                </div>
+                    <tr>
+                        <label class="form-label" >sk_customer</label>
+                        <td><input type="text" th:field="*{sk_customer}" class="form-control" placeholder="sk_customer" /></td>
+                    </tr>
+                    <div alight="left">
+
+                        <tr>
+                            <label class="form-label" >amount</label>
+                            <td><input type="text" th:field="*{amount}" class="form-control" placeholder="amount" /></td>
+                        </tr>
+                    </div>
+                    <br>
+                    <tr>
+                        <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
+                    </tr>
+
+                    </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
